@@ -184,6 +184,8 @@ def build_payment_payload(
         "x402Version": int(payment_required.get("x402Version", 2)),
         "scheme": requirement["scheme"],
         "network": requirement["network"],
+        "resource": payment_required.get("resource"),
+        "accepted": requirement,
         "payload": {
             "signature": signature,
             "authorization": authorization,
